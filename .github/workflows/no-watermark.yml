@@ -22,7 +22,6 @@ jobs:
 
       - name: Fetch website content and check for changes
         run: |
-          #!/usr/bin/env python3
           import requests
           from bs4 import BeautifulSoup
           import hashlib
@@ -83,3 +82,4 @@ jobs:
               os.system('git add .')
               os.system('git commit -m "Update website snapshots"')
               os.system('git push')
+          shell: python3
